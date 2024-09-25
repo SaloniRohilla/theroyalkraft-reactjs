@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-
 const fiberStages = [
   { id: 1, name: 'Stage 1', image: './images/stages/stage1.jpg', description: 'An elegant and durable fiber stage design, perfect for adding grandeur and sophistication to any event.' },
   { id: 2, name: 'Stage 2', image: './images/stages/stage2.jpg', description: 'A sleek, modern fiber stage that combines minimalism and style for contemporary event settings.' },
@@ -29,7 +28,6 @@ const mandaps = [
   { id: 18, name: 'Mandap 6', image: './images/mandaps/mandap6.jpg', description: 'A luxurious mandap with grand pillars and elegant finishes, designed to create a magnificent setting for any event.' },
 ];
 
-
 const slideIn = keyframes`
   from {
     opacity: 0;
@@ -42,9 +40,6 @@ const slideIn = keyframes`
 `;
 
 const PageContainer = styled.div`
-  background-image: url('./images/productbg.jpg'); 
-  background-size: cover;
-  background-position: center;
   padding: 6.5rem;
 `;
 
@@ -55,7 +50,6 @@ const PageTitle = styled.h1`
   color: ${({ theme }) => theme.colors.heading};
   animation: ${slideIn} 1s ease-out;
 `;
-
 
 const Section = styled.section`
   margin: 20px 0;
@@ -76,12 +70,10 @@ const SectionTitle = styled.h2`
 
 const ProductsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
   padding: 0 10%;
-  
-
 `;
 
 const ProductCard = styled.div`
@@ -97,16 +89,15 @@ const ProductCard = styled.div`
 
   width: 90%;
   margin: 0 auto;
-  
+
   &:hover {
     transform: scale(1.05);
   }
-
 `;
 
 const ProductImage = styled.img`
   width: 100%;
-  height: 500px; 
+  height: 500px;
   object-fit: cover;
   transition: opacity 0.3s ease;
 `;
@@ -118,16 +109,11 @@ const ProductDescription = styled.div`
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-background: rgba(255, 255, 255, 0.5);
-  color: blue;  // Change this to your desired color
+  background: rgba(107, 35, 107, 0.6);
+  color: white;  // Changed to white
   padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 1;  // Set to 1 to make it visible all the time
   box-sizing: border-box;
-  
-  ${ProductCard}:hover & {
-    opacity: 1;
-  }
 `;
 
 

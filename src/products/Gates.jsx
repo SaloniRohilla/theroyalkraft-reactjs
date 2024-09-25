@@ -75,7 +75,7 @@ const DesignCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 500px; /* Updated width to match Exterior.jsx */
   text-align: center;
   transition: transform 0.3s;
 
@@ -86,7 +86,7 @@ const DesignCard = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
 `;
 

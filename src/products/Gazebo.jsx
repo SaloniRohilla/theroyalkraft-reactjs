@@ -5,19 +5,19 @@ import styled from 'styled-components';
 const gazebos = [
   {
     id: 1,
-    image: '/path/to/gazebo1.jpg',
+    image: '/images/products/gazebo1.jpg',
     title: 'Elegant Gazebo',
     description: 'Our elegant gazebos provide a beautiful outdoor space for your guests to relax and enjoy the event.',
   },
   {
     id: 2,
-    image: '/path/to/gazebo2.jpg',
+    image: '/images/products/gazebo2.jpg',
     title: 'Modern Gazebo Design',
     description: 'Sleek and contemporary, our modern gazebos offer a stylish shelter for any outdoor event.',
   },
   {
     id: 3,
-    image: '/path/to/gazebo3.jpg',
+    image: '/images/products/gazebo3.jpg',
     title: 'Classic Gazebo',
     description: 'Timeless and grand, our classic gazebos add an air of elegance and charm to any occasion.',
   },
@@ -44,7 +44,7 @@ const Gazebo = () => {
   );
 };
 
-
+// Styled-components
 const Container = styled.div`
   padding: 12rem;
   background-color: #f9f9f9;
@@ -78,7 +78,7 @@ const DesignCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 500px; /* Updated width to match Fountains.jsx and other components */
   text-align: center;
   transition: transform 0.3s;
 
@@ -89,12 +89,12 @@ const DesignCard = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 400px; /* Updated height to match Fountains.jsx and other components */
   object-fit: cover;
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.7rem; /* Slightly increased font size for consistency */
   margin: 1rem 0;
   color: #006DB5;
 `;

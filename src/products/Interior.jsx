@@ -5,19 +5,19 @@ import styled from 'styled-components';
 const fiberInteriors = [
   {
     id: 1,
-    image: '/path/to/interior1.jpg',
+    image: '/images/products/int1.jpeg',
     title: 'Luxurious Banquet Hall Interior',
     description: 'Our luxurious fiber interiors provide a sophisticated and elegant atmosphere for any banquet hall.',
   },
   {
     id: 2,
-    image: '/path/to/interior2.jpg',
+    image: '/images/products/int2.jpeg',
     title: 'Modern Fiber Interior Design',
     description: 'With sleek and contemporary designs, our fiber interiors enhance the beauty and functionality of any space.',
   },
   {
     id: 3,
-    image: '/path/to/interior3.jpg',
+    image: '/images/products/int3.jpeg',
     title: 'Classic Fiber Interior',
     description: 'Timeless and grand, our classic fiber interiors add an air of elegance and charm to any banquet hall.',
   },
@@ -44,7 +44,7 @@ const Interior = () => {
   );
 };
 
-
+// Styled-components
 const Container = styled.div`
   padding: 12rem;
   background-color: #f9f9f9;
@@ -78,7 +78,7 @@ const DesignCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 500px; /* Updated width */
   text-align: center;
   transition: transform 0.3s;
 
@@ -89,12 +89,12 @@ const DesignCard = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 400px; /* Updated height */
   object-fit: cover;
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.7rem; /* Slightly increased font size */
   margin: 1rem 0;
   color: #006DB5;
 `;

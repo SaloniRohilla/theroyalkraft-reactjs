@@ -1,27 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const fountains = [
   {
     id: 1,
-    image: '/path/to/fountain1.jpg',
+    image: '/images/products/fountain1.jpg',
     title: 'Elegant Water Fountain',
     description: 'Our elegant water fountains are designed to create a serene and beautiful focal point for any outdoor space.',
   },
   {
     id: 2,
-    image: '/path/to/fountain2.jpg',
+    image: '/images/products/fountain3.jpg',
     title: 'Modern Water Fountain',
     description: 'Modern and sleek, our water fountains are perfect for contemporary settings, adding a touch of sophistication.',
   },
   {
     id: 3,
-    image: '/path/to/fountain3.jpg',
+    image: '/images/products/fountain1.jpg',
     title: 'Classic Water Fountain',
     description: 'Timeless and sophisticated, our classic water fountains provide a touch of elegance to any garden or patio.',
   },
-  
 ];
 
 const Fountains = () => {
@@ -78,7 +76,7 @@ const DesignCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
+  width: 500px; /* Updated width to match Mandap.jsx and Exterior.jsx */
   text-align: center;
   transition: transform 0.3s;
 
@@ -89,12 +87,12 @@ const DesignCard = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 200px;
+  height: 400px; /* Updated height to match Mandap.jsx and Exterior.jsx */
   object-fit: cover;
 `;
 
 const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.7rem; /* Slightly increased font size for consistency */
   margin: 1rem 0;
   color: #006DB5;
 `;
