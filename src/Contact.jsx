@@ -45,7 +45,7 @@ const ContactContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
-  background: url('/images/contactbg.jpg') no-repeat center center/cover;
+  background: url('/images/contactbg.png') no-repeat center center/cover;
   min-height: 100vh;
   position: relative;
 `;

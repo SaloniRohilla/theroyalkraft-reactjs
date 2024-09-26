@@ -9,7 +9,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
-      min-height: 600px;
+    min-height: 600px;
   }
 
   .section-hero-data {

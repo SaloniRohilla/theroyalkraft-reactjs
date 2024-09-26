@@ -98,7 +98,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 9rem;
-  background: url('./images/aboutbg.jpg') no-repeat center center/cover;
+  background: url('') no-repeat center center/cover;
 `;
 
 const Header = styled.div`

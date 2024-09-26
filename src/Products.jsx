@@ -104,13 +104,13 @@ const ProductImage = styled.img`
 
 const ProductDescription = styled.div`
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
   background: rgba(107, 35, 107, 0.6);
-  color: white;  // Changed to white
+  color: white;
   padding: 20px;
   opacity: 1;  // Set to 1 to make it visible all the time
   box-sizing: border-box;

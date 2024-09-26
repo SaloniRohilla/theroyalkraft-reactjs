@@ -1,0 +1,21 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom */
+    right: 30px; /* Distance from the right */
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 50%; /* Round shape */
+    width: 50px; /* Width */
+    height: 50px; /* Height */
+    font-size: 24px; /* Font size */
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Transition for fade in/out */
+    z-index: 1000; /* On top of other content */
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1; /* Visible when scrolled down */
+  }
+  

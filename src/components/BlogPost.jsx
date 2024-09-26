@@ -1,5 +1,3 @@
-// BlogPost.jsx
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { createClient } from 'contentful';
@@ -15,7 +13,7 @@ const client = createClient({
 // Styled components
 const BlogContainer = styled.div`
   max-width: 900px;
-  margin: 0 auto;
+  margin: 10rem auto;
   padding: 2rem;
   background-color: #f8f9fa;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -58,6 +56,8 @@ const BlogPost = () => {
           'fields.slug': slug,
         });
 
+        console.log("Response from Contentful:", response); // Log the response
+
         if (response.items.length > 0) {
           setPost(response.items[0]);
         } else {
@@ -84,8 +84,15 @@ const BlogPost = () => {
     return <div>No post available</div>;
   }
 
-  const { title, content, featuredImage } = post.fields;
-  const bodyContent = content ? content.content.map(node => node.content.map(item => item.value).join(' ')).join('\n\n') : '';
+  const { title, body, featuredImage } = post.fields; // Reference the correct body field
+
+  // Handling body field assuming it's rich text
+  const bodyContent = body 
+    ? body.content.map(node => 
+        node.content.map(item => item.value).join(' ')
+      ).join('\n\n') 
+    : '';
+  
   const featuredImageUrl = featuredImage?.[0]?.fields?.file?.url;
   const imageUrl = featuredImageUrl ? `https:${featuredImageUrl}` : '';
 
@@ -94,7 +101,7 @@ const BlogPost = () => {
       <Title>{title}</Title>
       {imageUrl && <FeaturedImage src={imageUrl} alt="Featured" />}
       <Content>
-        <ReactMarkdown>{bodyContent}</ReactMarkdown>
+        <ReactMarkdown>{bodyContent || "No content available"}</ReactMarkdown>
       </Content>
     </BlogContainer>
   );

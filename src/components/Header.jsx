@@ -6,6 +6,7 @@ import '../styles/Header.css'; // Import the new CSS file
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track if the menu is open
 
   // Effect to detect scroll and update state
   useEffect(() => {
@@ -23,12 +24,20 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Toggle menu open/close
+  const toggleMenu = () => {
+    setIsMenuOpen(prevState => !prevState);
+  };
+
   return (
     <header className={`main-header ${isScrolled ? 'scrolled' : 'transparent'}`}>
       <NavLink to="/">
         <img src={logo} alt="logo" className="logo" />
       </NavLink>
-      <Navbar />
+      <button className="navbar-toggler" onClick={toggleMenu}>
+        <span className="navbar-toggler-icon"></span> {/* Add a hamburger icon here */}
+      </button>
+      <Navbar isOpen={isMenuOpen} /> {/* Pass the isOpen state to Navbar */}
     </header>
   );
 };

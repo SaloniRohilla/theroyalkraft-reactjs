@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import AboutUs from './AboutUs';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Blog from './components/Blog'; 
 import BlogPost from './components/BlogPost';
 import Contact from './Contact';
@@ -80,6 +81,7 @@ const App = () => {
           <Route path="/stp" element={<Stp />} />
           <Route path="/interior" element={<Interior />} />
         </Routes>
+        <ScrollToTopButton />
         <Footer />
       </BrowserRouter>
     </ThemeProvider>
