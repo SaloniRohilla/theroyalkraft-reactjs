@@ -102,6 +102,21 @@ const ProductImage = styled.img`
   transition: opacity 0.3s ease;
 `;
 
+// const ProductDescription = styled.div`
+//   position: absolute;
+//   top: 80%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 80%;
+//   text-align: center;
+//   background: rgba(107, 35, 107, 0.6);
+//   color: white;
+//   padding: 20px;
+//     // Set to 1 to make it visible all the time
+//   box-sizing: border-box;
+// `;
+
+
 const ProductDescription = styled.div`
   position: absolute;
   top: 80%;
@@ -110,10 +125,10 @@ const ProductDescription = styled.div`
   width: 80%;
   text-align: center;
   background: rgba(107, 35, 107, 0.6);
-  color: white;
+  color: white !important; 
   padding: 20px;
-  opacity: 1;  // Set to 1 to make it visible all the time
   box-sizing: border-box;
+  font-size: 1.5em;
 `;
 
 
@@ -121,15 +136,15 @@ const ProductDescription = styled.div`
 
 const Products = () => {
   return (
-   <PageContainer>
-    <PageTitle>OUR PRODUCTS</PageTitle>
-    <Section>
-        <SectionTitle>Fiber Stages</SectionTitle>
+    <PageContainer>
+      <PageTitle>OUR PRODUCTS</PageTitle>
+      <Section>
+        <SectionTitle>Fiber Stage</SectionTitle>
         <ProductsContainer>
           {fiberStages.map((product) => (
             <ProductCard key={product.id}>
               <ProductImage src={product.image} alt={product.name} />
-              <ProductDescription>
+              <ProductDescription style={{ color: '#fff' }}>
                 <p>{product.description}</p>
               </ProductDescription>
             </ProductCard>
@@ -138,12 +153,12 @@ const Products = () => {
       </Section>
 
       <Section>
-        <SectionTitle>Fiber Entrance Gates</SectionTitle>
+        <SectionTitle>Fiber Entrance Gate</SectionTitle>
         <ProductsContainer>
           {entranceGates.map((product) => (
             <ProductCard key={product.id}>
               <ProductImage src={product.image} alt={product.name} />
-              <ProductDescription>
+              <ProductDescription style={{ color: '#fff' }}>
                 <p>{product.description}</p>
               </ProductDescription>
             </ProductCard>
@@ -152,13 +167,13 @@ const Products = () => {
       </Section>
 
       <Section>
-        <SectionTitle>Fiber Mandaps</SectionTitle>
+        <SectionTitle>Fiber Mandap</SectionTitle>
         <ProductsContainer>
           {mandaps.map((product) => (
             <ProductCard key={product.id}>
               <ProductImage src={product.image} alt={product.name} />
-              <ProductDescription>
-                <p>{product.description}</p> 
+              <ProductDescription style={{ color: '#fff' }}>
+                <p>{product.description}</p>
               </ProductDescription>
             </ProductCard>
           ))}
@@ -167,5 +182,6 @@ const Products = () => {
     </PageContainer>
   );
 };
+
 
 export default Products;
