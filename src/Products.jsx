@@ -1,6 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
+// Import your background image
+import bgImage from '/images/productbg.jpg'; // Update the path
+
 const fiberStages = [
   { id: 1, name: 'Stage 1', image: './images/stages/stage1.jpg', description: 'An elegant and durable fiber stage design, perfect for adding grandeur and sophistication to any event.' },
   { id: 2, name: 'Stage 2', image: './images/stages/stage2.jpg', description: 'A sleek, modern fiber stage that combines minimalism and style for contemporary event settings.' },
@@ -41,7 +44,13 @@ const slideIn = keyframes`
 
 const PageContainer = styled.div`
   padding: 6.5rem;
+  background-image: url(${bgImage}); /* Set the repeating background image */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-size: 2000px auto; /* Adjust the width of the background image */
+  width: 100%;
+  min-height: 100vh;
 `;
+
 
 const PageTitle = styled.h1`
   text-align: center;
@@ -102,21 +111,6 @@ const ProductImage = styled.img`
   transition: opacity 0.3s ease;
 `;
 
-// const ProductDescription = styled.div`
-//   position: absolute;
-//   top: 80%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 80%;
-//   text-align: center;
-//   background: rgba(107, 35, 107, 0.6);
-//   color: white;
-//   padding: 20px;
-//     // Set to 1 to make it visible all the time
-//   box-sizing: border-box;
-// `;
-
-
 const ProductDescription = styled.div`
   position: absolute;
   top: 80%;
@@ -130,9 +124,6 @@ const ProductDescription = styled.div`
   box-sizing: border-box;
   font-size: 1.5em;
 `;
-
-
-
 
 const Products = () => {
   return (
@@ -182,6 +173,5 @@ const Products = () => {
     </PageContainer>
   );
 };
-
 
 export default Products;

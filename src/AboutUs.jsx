@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+import InnerBanner from './components/InnerBanner';
 
 const fadeIn = keyframes`
   from {
@@ -16,6 +17,7 @@ const fadeIn = keyframes`
 const AboutUs = () => {
   return (
     <AboutContainer>
+      
       <Header>
         <Title>About Us</Title>
       </Header>

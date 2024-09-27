@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import introBg from '/images/introbg.png';
+import introBg from '/images/introbg.jpg'; // Import your new background image
 
 const Wrapper = styled.section`
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 10px;
-    min-height: 600px;
-    margin-bottom: -18rem; /* Adjust for layout needs */
-    position: relative; /* Position relative for absolute child */
-    z-index: 1; /* Ensure content is above the background image */
-  }
+  position: relative; /* Ensure the Wrapper can contain absolutely positioned children */
 
   /* Full-width background for the hero title */
   .full-width-bg {
@@ -25,19 +14,31 @@ const Wrapper = styled.section`
     text-align: center; 
     border-radius: 20px; /* Add rounded corners */
     overflow: hidden; /* Ensure no overflow of content around rounded corners */
+    z-index: 2; /* Ensure it is above the background image */
   }
 
   .background-image {
     position: absolute; 
-    top: 100%; 
+    top: 20%; /* Adjust this value to move the image downwards */
     left: 0;
     right: 0;
-    bottom: 0; /* Cover the entire area */
+    height: 70%; /* Set to a value that allows it to still cover the section */
     background: url(${introBg}) no-repeat center center; 
     background-size: cover; /* Ensure the image covers the entire background */
     z-index: -1; /* Place it behind other content */
-    background-color: red; /* Temporary solid color for debugging */
+  }
 
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    min-height: 600px;
+    margin-bottom: -18rem; /* Adjust for layout needs */
+    position: relative; /* Position relative for absolute child */
+    z-index: 2; /* Ensure content is above the background image */
   }
 
   /* Hero Title Styling */
@@ -126,6 +127,9 @@ const Intro = () => {
 
   return (
     <Wrapper>
+      {/* Background image below the title */}
+      <div className="background-image" />
+
       {/* Full-width background for the title */}
       <div className="full-width-bg">
         <h1 className="hero-title">
@@ -136,9 +140,6 @@ const Intro = () => {
         </h1>
       </div>
 
-      {/* Background image below the title */}
-      <div className="background-image" />
-
       <div className="container">
         <div className="section-hero-data">
           <p className="hero-para">
@@ -146,7 +147,7 @@ const Intro = () => {
           </p>
         </div>
         <div className="hero-image">
-          <img src="/images/intro.jpeg" alt="Wedding Decor" /> {/* Replace with your image path */}
+          <img src="/images/intro.jpeg" alt="Wedding Decor" /> {/* Keep this image as is */}
         </div>
       </div>
     </Wrapper>

@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="carousel-container">
       {/* Bootstrap Carousel */}
-      <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+      <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
         <div className="carousel-inner">
           {/* First Slide */}
           <div className="carousel-item active">

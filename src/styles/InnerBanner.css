@@ -1,0 +1,65 @@
+.main-header {
+    position: fixed; /* Keeps the header at the top */
+    width: 100%;
+    background-color: transparent; /* Transparent by default */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    z-index: 999; /* Ensure it is above the banner */
+}
+/* Main header styles */
+.main-header {
+    position: fixed; /* Keeps the header at the top */
+    width: 100%;
+    background-color: transparent; /* Transparent by default */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    z-index: 999; /* Ensure it is above the banner */
+}
+
+/* Inner banner styles */
+.inner-banner {
+    width: 100vw; /* Full width of the viewport */
+    position: absolute; /* Changed to absolute to position it correctly */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    background: url('./images/inner-banner.jpg') no-repeat center center / cover; /* Adjust image path as needed */
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure it's below the navbar */
+}
+
+/* Title styles for the inner banner */
+.inner-banner-title {
+    color: white;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow effect */
+}
+
+/* Styles for when the header is scrolled */
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background on scroll */
+}
+
+.inner-banner {
+    width: 100vw; /* Full width of the viewport */
+    position: relative; 
+    background: url('./images/inner-banner.jpg') no-repeat center center/cover; /* Adjust image path as needed */
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(-50vw + 50%); /* Center the banner */
+    margin-top: 0; /* Adjusted to bring the banner down */
+    z-index: 1000; /* Ensure it's below the navbar */
+}
+
+.inner-banner-title {
+    color: white;
+    font-size: 2.5rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional shadow effect */
+}
+
+/* Styles for when the header is scrolled */
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly opaque background on scroll */
+}

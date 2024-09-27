@@ -10,6 +10,8 @@ const Navbar = () => {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: relative; /* Ensure it’s positioned correctly */
+    z-index: 2000; /* Higher z-index to stay above the inner-banner */
 
     .menuIcon {
       display: none; /* Hidden by default */
