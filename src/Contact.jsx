@@ -31,12 +31,17 @@ const ContactUs = () => {
           <strong>Address:</strong> 108, First Floor, DLF Galleria Mall, Mayur Vihar, Phase-1 Extension, Near Metro Mayur Vihar Extension, New Delhi - 110091
         </InfoItem>
       </ContactInfo>
+      {/* New Inquiry Button */}
+      <InquiryButton onClick={() => window.open('https://docs.google.com/forms/d/1kM-qMDi-2dt3MQSJ0Q7mQXQ-3oLpzZfbdJkZPGzyWRs/edit', '_blank')}>
+        Send Inquiry Now!
+      </InquiryButton>
     </ContactContainer>
   );
 };
 
 export default ContactUs;
 
+// Styled components
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -123,6 +128,22 @@ const SubmitButton = styled.button`
   font-size: 1.2rem;
   color: #fff;
   background-color: #B200B2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const InquiryButton = styled.button`
+  margin-top: 20px; /* Add some space above the button */
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff; /* Different color for inquiry button */
   border: none;
   border-radius: 8px;
   cursor: pointer;

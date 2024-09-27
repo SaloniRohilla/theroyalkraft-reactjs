@@ -10,13 +10,12 @@ const Navbar = () => {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    position: relative; /* Ensure it’s positioned correctly */
-    z-index: 2000; /* Higher z-index to stay above the inner-banner */
+    position: relative;
+    z-index: 2000;
 
     .menuIcon {
-      display: none; /* Hidden by default */
+      display: none;
 
-      /* Style for the hamburger icon */
       .hamburger {
         width: 30px;
         height: 3px;
@@ -89,17 +88,17 @@ const Navbar = () => {
       }
     }
 
-    .get-in-touch {
+    .send-inquiry {
       background-color: #B200B2;
       max-width: 12rem;
       color: white;
-      padding: 0.8rem 2.1rem;
+      padding: 0.8rem 0.5rem;
       text-decoration: none;
       font-size: 1.3rem;
       font-weight: bold;
       border-radius: 4px;
       transition: background-color 0.3s linear;
-      margin-left: 3rem;
+      margin-left: 2rem;
       white-space: nowrap;
 
       &:hover {
@@ -109,22 +108,21 @@ const Navbar = () => {
 
     @media (max-width: 768px) {
       .navbar-list {
-        display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')}; /* Show or hide links */
-        flex-direction: column; /* Stack links vertically */
+        display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+        flex-direction: column;
         position: absolute;
-        background-color: white; /* Set background for dropdown */
-        top: 100%; /* Position it below the navbar */
+        background-color: white;
+        top: 100%;
         left: 0;
-        width: 100%; /* Full width */
-        z-index: 2; /* Ensure it is above other content */
+        width: 100%;
+        z-index: 2;
       }
 
       .menuIcon {
-        display: flex; /* Show the hamburger icon on small screens */
+        display: flex;
         flex-direction: column;
         cursor: pointer;
 
-        /* Change hamburger icon when menu is open */
         .hamburger:nth-child(1) {
           transform: ${({ isOpen }) => (isOpen ? 'rotate(-45deg) translate(-5px, 6px)' : 'none')};
         }
@@ -138,7 +136,6 @@ const Navbar = () => {
     }
   `;
 
-  // Toggle menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(prevState => !prevState);
   };
@@ -169,7 +166,7 @@ const Navbar = () => {
             <NavLink to='/gates'>Fiber Entrance Gates</NavLink>
             <NavLink to='/fiber-mandaps'>Fiber Mandaps</NavLink>
             <NavLink to='/fiber-work'>Fiber Work</NavLink>
-            <NavLink to='/fiber-Stage'>Fiber Stage</NavLink>
+            <NavLink to='/fiber-stage'>Fiber Stage</NavLink>
             <NavLink to='/fountain'>Fountain</NavLink>
             <NavLink to='/gazebo'>Gazebo</NavLink>
             <NavLink to='/interior'>Interior</NavLink>
@@ -189,8 +186,11 @@ const Navbar = () => {
             <NavLink to='/stp'>STP (Sewage Treatment Plants)</NavLink>
           </div>
         </li>
+        <li>
+          <NavLink className='navbar-link' to='/contact'>Contact Us</NavLink>
+        </li>
       </ul>
-      <NavLink className='get-in-touch' to='/contact'>Get in Touch!</NavLink>
+      <a className='send-inquiry' href='https://docs.google.com/forms/d/1kM-qMDi-2dt3MQSJ0Q7mQXQ-3oLpzZfbdJkZPGzyWRs/edit' target='_blank' rel='noopener noreferrer'>Send Inquiry Now</a>
     </Nav>
   );
 };

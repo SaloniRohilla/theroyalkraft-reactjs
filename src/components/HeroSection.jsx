@@ -53,7 +53,9 @@ const HeroSection = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      
     </section>
+    
   );
 };
 
