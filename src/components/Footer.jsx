@@ -65,7 +65,7 @@ const FooterContainer = styled.div`
   color: white;
   padding: 60px 20px;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -138,6 +138,6 @@ const FooterBottom = styled.div`
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #34495E;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #BDC3C7;
 `;

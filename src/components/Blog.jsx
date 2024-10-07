@@ -124,7 +124,7 @@ const Blog = () => {
 
   return (
     <Container>
-      <Heading>Our Blogs</Heading>
+      <Heading>Blogs</Heading>
       {blogPosts.length > 0 ? (
         blogPosts.map(post => {
           const featuredImageUrl = post.fields.featuredImage?.[0]?.fields?.file?.url;
