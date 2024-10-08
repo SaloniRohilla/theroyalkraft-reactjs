@@ -5,19 +5,19 @@ import styled from 'styled-components';
 const fiberInteriors = [
   {
     id: 1,
-    image: '/images/products/int1.jpeg',
+    image: '/images/products/int1.jpg',
     title: 'Luxurious Banquet Hall Interior',
     description: 'Our luxurious fiber interiors provide a sophisticated and elegant atmosphere for any banquet hall.',
   },
   {
     id: 2,
-    image: '/images/products/int2.jpeg',
+    image: '/images/products/int2.jpg',
     title: 'Modern Fiber Interior Design',
     description: 'With sleek and contemporary designs, our fiber interiors enhance the beauty and functionality of any space.',
   },
   {
     id: 3,
-    image: '/images/products/int3.jpeg',
+    image: '/images/products/int3.jpg',
     title: 'Classic Fiber Interior',
     description: 'Timeless and grand, our classic fiber interiors add an air of elegance and charm to any banquet hall.',
   },

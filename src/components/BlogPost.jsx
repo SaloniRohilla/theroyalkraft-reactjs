@@ -84,22 +84,23 @@ const BlogPost = () => {
     return <div>No post available</div>;
   }
 
-  const { title, body, featuredImage } = post.fields; // Reference the correct body field
+  const { title, body, featuredImage } = post.fields;
 
-  // Handling body field assuming it's rich text
-  const bodyContent = body 
+  // Handling body as text or markdown
+  const bodyContent = body?.content
     ? body.content.map(node => 
         node.content.map(item => item.value).join(' ')
-      ).join('\n\n') 
+      ).join('\n\n')
     : '';
-  
-  const featuredImageUrl = featuredImage?.[0]?.fields?.file?.url;
-  const imageUrl = featuredImageUrl ? `https:${featuredImageUrl}` : '';
+
+  const featuredImageUrl = featuredImage?.fields?.file?.url
+    ? `https:${featuredImage.fields.file.url}`
+    : '';
 
   return (
     <BlogContainer>
       <Title>{title}</Title>
-      {imageUrl && <FeaturedImage src={imageUrl} alt="Featured" />}
+      {featuredImageUrl && <FeaturedImage src={featuredImageUrl} alt={title} />}
       <Content>
         <ReactMarkdown>{bodyContent || "No content available"}</ReactMarkdown>
       </Content>

@@ -147,7 +147,7 @@ const Intro = () => {
           </p>
         </div>
         <div className="hero-image">
-          <img src="/images/intro.jpeg" alt="Wedding Decor" /> {/* Keep this image as is */}
+          <img src="/images/intro.jpg" alt="Wedding Decor" /> {/* Keep this image as is */}
         </div>
       </div>
     </Wrapper>
