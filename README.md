@@ -10,7 +10,7 @@ The Royal Kraft website is a comprehensive platform showcasing a wide range of f
 - [Project Structure](#project-structure)
 - [Tech Stack](#tech-stack)
 - [Customization](#customization)
-- [License](#license)
+
 
 ## Features
 
