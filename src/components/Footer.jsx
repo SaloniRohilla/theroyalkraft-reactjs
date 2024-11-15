@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; // Import social media icons
 
 const Footer = () => {
   return (
@@ -51,6 +52,23 @@ const Footer = () => {
           </ContactInfo>
         </Column>
       </FooterContent>
+      <SocialMediaContainer>
+        <SocialMediaTitle>Follow Us:</SocialMediaTitle>
+        <SocialMediaIcons>
+          <SocialIcon href="http://facebook.com/profile.php?id=100085229783054" target="_blank" rel="noopener noreferrer">
+            <FaFacebook />
+          </SocialIcon>
+          <SocialIcon href="http://x.com/TheRoyalkraft" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </SocialIcon>
+          <SocialIcon href="http://instagram.com/theroyalkraft" target="_blank" rel="noopener noreferrer">
+            <FaInstagram />
+          </SocialIcon>
+          <SocialIcon href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </SocialIcon>
+        </SocialMediaIcons>
+      </SocialMediaContainer>
       <FooterBottom>
         © 2024 The Royal Kraft by Kaden Koppers India Pvt. Ltd. All rights reserved.
       </FooterBottom>
@@ -60,6 +78,7 @@ const Footer = () => {
 
 export default Footer;
 
+// Styled Components
 const FooterContainer = styled.div`
   background: #2C3E50;
   color: white;
@@ -140,4 +159,30 @@ const FooterBottom = styled.div`
   border-top: 1px solid #34495E;
   font-size: 1.5rem;
   color: #BDC3C7;
+`;
+
+const SocialMediaContainer = styled.div`
+  text-align: center;
+  margin: 20px 0;
+`;
+
+const SocialMediaTitle = styled.h4`
+  margin-bottom: 10px;
+  color: #E74C3C;
+`;
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const SocialIcon = styled.a`
+  color: white;
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #E74C3C;
+  }
 `;
